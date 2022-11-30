@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{float a,b;
+int c;
+printf("enter number one:");
+scanf("%f",&a);
+printf("enter number two:");
+scanf("%f",&b);
+printf("1.addition\n2.substaction\n3.multiplication\n4.dividetion");
+printf("\nenter procces no:");
+scanf("%d",&c);
+switch(c){
+    case 1:printf("%f",a+b);
+           break;
+    case 2:printf("%f",a-b);
+         break;
+    case 3:printf("%f",a*b);
+    break;
+    case 4:printf("%f",a/b);
+}
+return 0;
+}
