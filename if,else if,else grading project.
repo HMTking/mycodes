@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{int marks;
+printf("enter studen's marks");
+scanf("%d",&marks);
+if(marks>=90){printf("pass\ngrade A");}
+else if(marks<90&&marks>75){printf("pass\ngrade B");}
+else if(marks<=75 && marks>60){printf("pass\ngrade c");}
+else if(marks<=60 && marks>33){printf("pass\ngrade D");}
+else{printf("fail\nbetter luck next time");}
+return 0;
+}
