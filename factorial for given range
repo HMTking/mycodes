@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int min,mex,n,i,fact;
+     
+    printf("enter min");
+    scanf("%d",&min);
+     printf("enter mex");
+    scanf("%d",&mex);
+    for(n=min;n<=mex;n++)
+    {
+      fact=1;
+        for(int i=1;i<=n;i++)
+            fact=fact*i;
+             printf("%d\n",fact);
+    }
+   
+}
