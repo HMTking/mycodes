@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int n,a,b,c,d;
+    printf("enter three number for test");
+    scanf("%d",&n);
+   a=n/100;
+   b=(n-a*100)/10;
+   c=n-(a*100)-(b*10);
+   d=(a*a*a)+(b*b*b)+(c*c*c);
+   if(n==d){printf("the number is armstrong");}
+   else{printf("the number is not armstrong");}
+}
