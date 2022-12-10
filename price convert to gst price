@@ -1,0 +1,14 @@
+#include<stdio.h>
+gst_price(float price);
+int main()
+{
+    float velue;
+    printf("enter price");
+    scanf("%f",&velue);
+    gst_price(velue);
+}
+
+gst_price(float price){
+    price=price+price*0.18;
+    printf("%f",price);
+}
