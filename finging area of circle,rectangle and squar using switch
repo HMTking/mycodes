@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{int n,r,l1,l2;
+    printf("enter number for\ncircle 1\nrectangle 2\nsquar 3\n");
+    scanf("%d",&n);
+    switch(n){
+ case 1:
+       printf("enter redius\n");
+       scanf("%d",&r);
+       printf("area of circle\n%d",4*22*r*r/7);
+                   break;
+ case 2:
+       printf("enter rectangle length\n");
+       scanf("%d%d",&l1,&l2);
+       printf("area of rectangle\n%d",l1*l2);        
+                   break;   
+ case 3: 
+       printf("enter squar length\n");
+       scanf("%d",&l1);
+       printf("area of squar\n%d",l1*l1);            
+                   break;
+ default:
+       printf("you enter invalid number");
+   }
+}
