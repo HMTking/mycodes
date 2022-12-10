@@ -1,0 +1,26 @@
+#include<stdio.h>
+int circle(int r);
+int rectangle(int l1,int l2);
+int squar(int l1);
+int main()
+{
+    int r,l1,l2;
+    printf("enter redius");
+    scanf("%d",&r);
+      printf("enter l1");
+    scanf("%d",&l1);
+      printf("enter l2");
+    scanf("%d",&l2);
+    circle(r);
+  rectangle(l1,l2) ;
+  squar(l1);
+}
+int circle(int r){
+    printf("%f\n",3.14*r*r);
+}
+int rectangle(int l1,int l2){
+    printf("%d\n",l1*l2);
+}
+int squar(int l1){
+    printf("%d\n",l1*l1*l1*l1);
+}
