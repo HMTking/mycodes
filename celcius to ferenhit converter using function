@@ -1,0 +1,16 @@
+#include<stdio.h>
+float con(float a);
+int main()
+{
+    float x;
+    printf("enter celcius");
+    scanf("%f",&x);
+    float b=con(x);
+    printf("%f",b);
+}
+
+float con(float a){
+    float f=a*9/5+32;
+    return f;
+   
+}
