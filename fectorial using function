@@ -1,0 +1,16 @@
+#include<stdio.h>
+int fectorial(int a);
+int main()
+{
+    int x;
+    printf("enter number");
+    scanf("%d",&x);
+    int f=fectorial(x);
+    printf("%d",f);
+}
+int fectorial(int a){
+    if(a==1||a==0){
+        return 1;
+    }
+    else{return a * fectorial((a-1));}
+}
