@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>//formating
+#include<time.h>//formating
+int main()
+{
+    int number,x,attempt=1;
+   
+    srand(time(0));//formating
+    number=rand() %100+1;//it genrate random number between 1 to 100
+    // printf("%d\n",number);
+     printf("enter number which you want between 1 to 100::\n");
+    do{
+        
+    scanf("%d",&x);
+    if(x<number)
+               {printf("enter higher number please!\n");}
+    else if(x>number)
+               {printf("enter lower number please!\n");}
+    else
+               {printf("you win the game in %d attempt",attempt);}
+    attempt++;
+    }
+    while(x!=number);
+    
+}
