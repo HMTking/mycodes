@@ -1,0 +1,17 @@
+#include<stdio.h>
+void sum_And_avg(int x,int y,int *sum,float *avg){
+    *sum=x+y;
+    *avg=*sum/2.00; //for getting float value 2==2.00
+    
+}
+int main()
+{
+    int a,b,sum;
+    float avg;
+    printf("enter number 1::");
+    scanf("%d",&a);
+     printf("enter number 2::");
+    scanf("%d",&b);
+    sum_And_avg(a,b,&sum,&avg);
+    printf("the sum is %d\n the average is %f",sum,avg);
+}
