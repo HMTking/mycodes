@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int number;
+
+    srand(time(0));// for every time other number come
+    number=rand() %2;// only 0 and 1 out come
+    if(number==0){
+        printf("H");
+    }
+    else{
+        printf("T");
+    }
+}
