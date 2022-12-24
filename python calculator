@@ -1,0 +1,18 @@
+def add(num1,num2):
+    return num1+num2
+def sub(num1,num2):
+    return num1-num2
+def muli(num1,num2):
+    return num1*num2
+def div(num1,num2):
+    return num1/num2
+
+print("select operater::\n1.add\n2.sub\n3.multi\n4.div\n")
+select=int(input("select oprator 1,2,3,4::"))
+number1=int(input("enter number::"))    
+number2=int(input("enter number::"))  
+if select==1:print(add(number1,number2))
+elif select==2:print(sub(number1,number2))
+elif select==3:print(muti(number1,number2))
+elif select==4:print(div(number1,number2))
+else:print("invalid")
