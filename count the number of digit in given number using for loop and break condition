@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,count=0;
+    printf("enter the number::");
+    scanf("%d",&n);
+    for(int i=0;i<101;i++){
+        if(n/(pow(10,i))>1){count=++count;}//note:do not write (count=count++)
+        else{break;}
+    }
+    printf("%d\n",count);   
+}
