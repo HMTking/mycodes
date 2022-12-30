@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<math.h>
+int reverse(int n);
+int main()
+{
+    int n1,count=0;
+    int A[10];
+    printf("enter number::");
+    scanf("%d",&n1);
+    int n=reverse(n1);
+    printf("%d\n",n);
+    for(int i=0;i<=100;i++){ 
+        int a=(n/pow(2,i));
+
+        A[i]=a%2;
+        // printf("%d\n",A[i]);
+         count=count+1;
+        if(a==1||a==0){
+            break;}
+    }
+
+
+    // printf("\n%d\n",count);
+    for(int j=0;j<count;j++){
+        printf("%d",A[count-j-1]);
+
+    }
+}
+
+
+int reverse(int n)
+{
+    int count=0;
+    int K=0;
+    
+    for(int i=0;i<101;i++){
+        if(n/(pow(10,i))>=1){count=++count;}//note:do not write (count=count++)
+        else{break;}
+    }
+    // printf("%d\n",count);   
+
+    for(int i=1;i<=count;i++)//
+    {
+        int a=(pow(10,i));
+        int b=(pow(10,i-1));
+        int c=n%a;
+        int d=n%b;
+        int e=pow(10,i-1);
+        int X=(c-d)/e;
+        // printf("%d",X);
+        
+        K=K*10+X;
+       
+    }
+//  printf("\n%d\n",K);
+return K;
+}
