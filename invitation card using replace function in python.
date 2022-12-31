@@ -1,0 +1,17 @@
+name=input("enter name::")
+date=input("enter date::")
+
+letter='''hello xyz sir;
+                we greating to inviting you in our honarable prime minister borthady party .at date of dd/mm/yy
+                
+             your best wisher
+                "valamidir putin" '''
+newletter=letter.replace("xyz",name)
+# print(newletter)
+newletter1=newletter.replace("dd/mm/yy",date)
+print(newletter1)
+
+
+
+
+                                               
