@@ -1,0 +1,29 @@
+a=input("enter number")
+b=input("enter number")
+c=input("enter number")
+d=input("enter number")
+if(a>b):
+    if(a>c):
+        if(a>d):
+            print(a,"is gretest")
+        else:
+            print(d,"is gretest")
+    else:
+        if(c>d):
+            print(c,"is gretest")
+        else:
+            print(d,"is gretest")
+            
+else:
+    if(b>c):
+        if(b>d):
+            print(b,"is gretest")
+        else:
+            print(d,"is gretest")
+    else:
+        if(c>d):
+            print(c,"is gretest")
+        else:
+            print(d,"is gretest")
+    
+      
