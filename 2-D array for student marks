@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int student,subject;
+    printf("enter student number");
+    scanf("%d",&student);
+    printf("enter subject number");
+    scanf("%d",&subject);
+    int sm[student][subject];
+    for(int i=0;i<student;i++){
+        for(int j=0;j<subject;j++){
+            printf("enter for student number %d and subject number %d::",i+1,j+1);
+            scanf("%d",&sm[i][j]);
+        }
+    }
+    //  for(int i=0;i<student;i++){
+    //     for(int j=0;j<subject;j++){
+    //         printf("student no %d,get sub marks:%d\n is %d\n",i+1,j+1,sm[i][j]);
+            
+    //     }
+    // }
+    // int stud,sub;
+    // printf("enter student number");
+    // scanf("%d",&stud);
+    //  printf("enter subject number");
+    // scanf("%d",&sub);
+    // printf("%d",sm[stud-1][sub-1]);
+    int stud;
+    printf("enter student number");
+    scanf("%d",&stud);
+  
+    for(int i=0;i<subject;i++){
+        printf("%d\n",sm[stud-1][i]);
+    }
+    
+    
+}
