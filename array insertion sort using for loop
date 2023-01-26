@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int n,temp,i,j;
+    printf("enter how many number of element in array you requied:");
+    scanf("%d",&n);
+    int a[n];
+
+    for(i=0;i<n;i++)
+    {
+        printf("enter element no %d:",i+1);
+        scanf("%d",&a[i]);
+    }
+    
+    for(i=0;i<n;i++)
+    {
+      for(j=i+1;j<n;j++)
+      {
+          if(a[i]>a[j])//if you want to convert in to decreasing order then change condition if(a[i]<a[j])
+          {
+          temp=a[j];
+          a[j]=a[i];
+          a[i]=temp;
+          } 
+      }
+    }
+    
+ for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
