@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("enter how many number of element in array you requied:");
+    scanf("%d",&n);
+    int a[n];
+
+    for(int i=0;i<n;i++)
+    {
+        printf("enter element no %d:",i+1);
+        scanf("%d",&a[i]);
+    }
+    
+for(int i=0;i<n;i++)
+   {
+    int min=i;
+    for(int j=i+1;j<n;j++)
+        {
+        if(a[min]>a[j]){
+            min=j;
+        }
+   }
+    int temp=a[min];
+    a[min]=a[i];
+    a[i]=temp;
+    }
+   
+ for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+}
