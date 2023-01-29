@@ -1,0 +1,5 @@
+'''12.Read two integer numbers from the keyboard and print minimum value
+using ternary operator'''
+a=int(input("enter number one:"))
+b=int(input("enter number two"))
+print(a) if a<=b else print(b)
