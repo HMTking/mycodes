@@ -1,0 +1,5 @@
+'''24.Write a program to print a given string is a palindrome or not.'''
+a=input("enter string:")
+if(a[::-1]==a[::]):
+    print("yes it is palindrome")
+else:print("no it is not palindrome")    
