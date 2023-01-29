@@ -1,0 +1,11 @@
+'''26. Write a program to print number of vowels present in a string.'''
+a=input("enter string")
+vowels="a,i,u,o,e,A,E,I,O,U"
+x=0
+vow=""
+for i in a:
+    if i in vowels:
+        x=x+1
+        vow=vow+i
+print(vow,"\ntotal vowels is:",x)        
+        
