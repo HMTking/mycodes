@@ -1,0 +1,12 @@
+'''25.Write a program to remove punctuations from a string.'''
+
+a=input("enter string")
+b=''':;"'?/>.<,|\~`!@#$%^&*{[}]()_-+='''
+newstr=""
+for i in a:
+    # print(i)
+    if i not in b:
+        # print(i)
+        newstr= newstr+i
+print(newstr)         
+    
