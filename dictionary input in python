@@ -1,0 +1,10 @@
+'''10.Write a Python program to enter name and percentage marks in a dictionary
+and display information on the screen.'''
+dic={}
+n=int(input("enter number of pair you want:"))
+for i in range(n):
+    x=input("enter student name:")
+    y=input("enter percentage")
+    dic.update({x:y})
+s=input("enter student name which you want to :")
+print(dic.get(s))
