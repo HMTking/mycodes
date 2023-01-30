@@ -1,0 +1,16 @@
+a=[]
+n=int(input("enter number of element you want  add in list:"))
+for i in range(n):
+    x=int(input ("number you want to add"))
+    a.append(x)
+#####selection sort#######
+for i in range(n):
+    min=i
+    for j in range(i+1,n):
+        if(a[min]>a[j]):
+            min=j
+    if(min!=i):
+        temp=a[min]
+        a[min]=a[i]
+        a[i]=temp
+print(a)
