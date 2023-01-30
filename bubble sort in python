@@ -1,0 +1,14 @@
+a=[]
+n=int(input("enter number of element you want t add in list:"))
+for i in range(n):
+    x=int(input ("number you wnt to add"))
+    a.append(x)
+#####bubble sort#######
+for i in range(n):
+    for j in range(n-1):
+        if(a[j]>a[j+1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp
+print(a)            
+    
