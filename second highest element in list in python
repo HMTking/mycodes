@@ -1,0 +1,16 @@
+k=0
+a=[]
+for i in range(10):
+    x=int(input("enter number"))
+    a.append(x)
+a.sort()    
+print(a)
+for i in range(10):
+    if(a[9-i]!=a[8-i]):
+        print(a[8-i])
+        break
+    else:
+        k=1+k
+if(k==10):
+    print("all element is equal and velue of element is:",a[0])
+    
