@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include <string.h>
+int main()
+{
+    int k;
+   char a[100];
+   char b[100];
+    gets(a);
+    
+int n=strlen(a);
+for(int i=0;i<n;i++)
+                    {
+        b[i]=a[n-1-i];
+                    }
+
+puts(b);
+
+for(int i=0;i<n;i++)
+                   {
+     if(a[i]==b[i])
+     {
+         k=k+1;
+     }
+                   }
+   if(k==n)
+     {
+         printf("it is pelindom");
+     }
+     else
+     {
+         printf("it is not pelindom");
+     }
+}
+ 
+
+  
