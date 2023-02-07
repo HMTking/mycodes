@@ -1,0 +1,16 @@
+//Write C programs that use both recursive and non-recursive functions for print Fibonacci series.
+#include<stdio.h>
+int main(){
+    int n;
+    printf("enter number of term:");
+    scanf("%d",&n);
+    printf("%d",fibo(n));
+}
+int fibo(int n){
+    if(n==0||n==1){
+        return n;}
+    else{
+        return fibo(n-1)+fibo(n-2);
+    
+    }
+}
