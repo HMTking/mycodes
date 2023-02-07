@@ -1,0 +1,33 @@
+//Write a C program that reads a line of text and counts all occurrence of a particular word.
+#include<stdio.h>
+#include <string.h>
+int main()
+{int count=0;
+    char str[100];
+    char find[20];
+    printf("enter string::");
+    gets(str);
+    printf("enter word which you want to count ::");
+    gets(find);
+    int n1=strlen(str);
+    int n2=strlen(find);
+    for(int i=0;i<n1;i++){
+        int temp=0;
+        for(int j=0;j<n2;j++)
+        {
+            if(str[i+j]==find[j]){
+                temp++;
+            }
+            else{
+                break;
+            }
+            
+            
+            if(temp==n2){
+                count=count+1;
+               
+            }
+        }
+    }
+    printf("the given word %s is repeated :%d ",find,count);
+}
