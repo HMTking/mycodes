@@ -1,0 +1,16 @@
+//Write a C program to find the length of string using pointers.
+#include<stdio.h>
+int main()
+{
+    char string[100];
+    printf("enter string::");
+    gets(string);
+    int  count=0;
+    char *ptr;
+    
+    for(ptr=&string[0];*ptr!='\0';ptr++){
+        count++;
+       
+    }
+    printf("%d",count);
+}
