@@ -1,0 +1,57 @@
+/*Write a C program to perform the following:
+I. Addition of two matrices
+II. Multiplication of two matrices
+To perform multiplication of two matrices, we should make sure that the number of columns in the 1st matrix is equal to the rows in the 2nd matrix. Therefore, the resulting matrix product will have a number of rows of the 1st matrix and a number of columns of the 2nd matrix.
+*/
+#include<stdio.h>
+int main(){
+    int n,m,a,i,j;
+    printf("enter no of collum of first metrix which is equal to size of row of second metrix:");
+    scanf("%d",&n);
+    printf("enter row size for first metrix:");
+    scanf("%d",&m);
+     printf("enter collum size for second metrix:");
+    scanf("%d",&a);
+    int mat1[m][n],mat2[n][a],fin[m][a];
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("enter element mat1[%d][%d]:",i+1,j+1);
+        scanf("%d",&mat1[i][j]);
+    }
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<a;j++){
+            printf("enter element mat2[%d][%d]:",i+1,j+1);
+        scanf("%d",&mat2[i][j]);
+    }
+    }
+   for(i=0;i<m;i++){
+       for(j=0;j<a;j++){
+           int sum=0;
+           for(int k=0;k<n;k++){
+               sum=sum+mat1[i][k]*mat2[k][j];
+           }
+           fin[i][j]=sum;
+       }
+   }
+   for(i=0;i<m;i++){
+       for(j=0;j<n;j++){
+           printf("%d ",mat1[i][j]);
+       }printf("\n");
+     }
+     printf("\n\n");
+     for(i=0;i<n;i++){
+       for(j=0;j<a;j++){
+           printf("%d ",mat2[i][j]);
+       }printf("\n");
+         }
+     printf("\n\n");
+     for(i=0;i<m;i++){
+       for(j=0;j<a;j++){
+           printf("%d ",fin[i][j]);
+       }
+         printf("\n");
+     }
+
+    
+}
