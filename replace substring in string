@@ -1,0 +1,58 @@
+
+#include<stdio.h>  
+#include<string.h>
+  int main() {
+        char str[256], substr[128], replace[128], output[256];
+        printf("enter string:");
+        gets(str);
+         printf("enter substring:");
+         gets(substr);
+          printf("enter replace:");
+          gets(replace);
+        int i = 0, j = 0, flag = 0, start = 0;
+    
+       for(i=0;str[i]!='\0';i++){
+            
+            if (str[i] == substr[j]||substr[j] == '\0') 
+                {       if (!flag){start = i;}
+                        j++;        
+                        if (substr[j] == '\0') {break;}
+                        flag = 1;
+                }       
+            else 
+                {  flag=0;
+                   start=0;
+                   j=0;    }
+        }          
+               
+           
+                   
+                   
+       if (flag)
+        {
+                for (i = 0; i < start; i++)
+                        {output[i] = str[i];}
+
+                // replace substring with another string 
+                for (j = 0; j < strlen(replace); j++) 
+                {
+                        output[i] = replace[j];
+                        i++;
+                }
+                // copy remaining portion of the input string "str" 
+                for (j = start + strlen(substr); j < strlen(str); j++)
+                {
+                        output[i] = str[j];
+                        i++;
+                }
+                // print the final string 
+                
+                printf("Output: %s\n", output);
+        } 
+        else {
+                printf("%s is not a substring of %s\n", substr, str);
+             }   
+      }       
+       
+       
+    
