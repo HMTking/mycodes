@@ -1,0 +1,23 @@
+#include<iostream>
+int main(){
+    int n,i,j;
+    scanf("%d",&n);
+    int arr[n];
+    for(i=1;i<=n;i++){
+        arr[i]=i;
+    }
+    for(i=2;i<=n;i++){
+        if(arr[i]==i){
+            for(j=i*i;j<=n;j=j+i){
+            if(arr[j]==j)//it may posible that coming number can multipule of more than one prime number than we take only smaller one
+            {
+            arr[j]=i;
+          }
+        }
+      }    
+    }
+    while(n!=1){
+        printf("%d ",arr[n]);
+        n=n/arr[n];
+    }
+}
