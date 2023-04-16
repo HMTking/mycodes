@@ -1,0 +1,81 @@
+#include<iostream>
+#include<stdlib.h>
+struct node{
+	int data;
+	node* next;
+};
+void printlist(node* ptr){
+	while(ptr!=NULL){
+	
+	printf("%d ",ptr->data);
+	ptr=ptr->next;
+}
+}
+int main(){
+	struct node*head,*second,*third,*end;
+	head=(node*)malloc(sizeof(node));
+		second=(node*)malloc(sizeof(node));
+			third=(node*)malloc(sizeof(node));
+			end=(node*)malloc(sizeof(node));
+			
+	head->data=10;
+	second->data=20;
+	third->data=30;
+	end->data=40;
+	head->next=second;
+	second->next=third;
+	third->next=end;
+	end->next=NULL;
+	
+	//deletion of first;
+//	node*ptr=head;
+//	head=head->next;
+//	free(ptr);
+	
+	//deletion of end element;
+//    node*ptr=head;
+//    node *ptr2=ptr->next;
+//
+//    while(ptr2->next!=NULL){
+//    	ptr=ptr->next;
+//    	ptr2=ptr2->next;
+//	}
+//	ptr->next=NULL;
+//	free(ptr2);
+
+
+	//delation in perticular indexx;
+//	int index;
+//	printf("enter index for deletion:");
+//	scanf("%d",&index);
+//	node *ptr=head;
+//	node *ptr2=head->next;
+//	for(int i=1;i<index-1;i++){
+//		ptr=ptr->next;
+//		ptr2=ptr2->next;
+//	}
+//	ptr->next=ptr2->next;
+//	free(ptr2);
+
+
+ 	//deletion of particular value
+	int velue;
+	printf("enter velue for deletion:");
+	scanf("%d",&velue);
+	node*ptr=head;
+	node*ptr2=head->next;
+	while(ptr2->data!=velue && ptr2->next!=NULL){
+	
+		ptr2=ptr2->next;
+		ptr=ptr->next;
+		
+	}
+	if(ptr2->data==velue){
+		ptr->next=ptr2->next;
+		free(ptr2);
+	}
+	else{
+		printf("element is not exist\n");
+	}
+	printlist(head);
+}
