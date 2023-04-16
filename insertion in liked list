@@ -1,0 +1,62 @@
+#include<iostream>
+#include<stdlib.h>
+struct node{
+	int data;
+	node *next;
+};
+int main(){
+	node *head, *second,*third,*end;
+	head=(node*)malloc(sizeof(node));
+		second=(node*)malloc(sizeof(node));
+			third=(node*)malloc(sizeof(node));
+				end=(node*)malloc(sizeof(node));
+	head->data=10;
+	second->data=20;
+	third->data=30;
+	end->data=40;
+	head->next=second;
+	second->next=third;
+	third->next=end;
+	end->next=NULL;
+	
+	// insert in first;
+	int num;
+	printf("enter number for first:");
+	scanf("%d",&num);
+	node *newhead=(node*)malloc(sizeof(node));
+    newhead->data=num;
+    newhead->next=head;
+    
+    //insert at last;
+    int num2;
+    printf("enter number for last element:");
+    scanf("%d",&num2);
+    node *newend=(node*)malloc(sizeof(node));
+    newend->data=num2;
+    end->next=newend;
+    newend->next=NULL;
+   
+   
+    //insert in anywhere;
+    int num3,index;
+    printf("enter element and index respectivly:");
+    scanf("%d%d",&num3,&index);
+    int count=0;
+    node *ptr=(node*)malloc(sizeof(node));
+    	ptr=head;
+    while(count!=index-2){
+    	
+    	ptr=ptr->next;
+    	count++;
+	}
+	node *insert=(node*)malloc(sizeof(node));
+    insert->data=num3;
+    insert->next=ptr->next;
+    ptr->next=insert;
+   
+	while(newhead!=NULL){
+		printf("%d ",newhead->data);
+		newhead=newhead->next;
+}
+		
+}
