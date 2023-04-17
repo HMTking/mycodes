@@ -1,0 +1,69 @@
+#include<iostream>
+#include<stdlib.h>
+struct stack{
+	int size;
+	int top;
+	int *arr;
+};
+
+int printempty(struct stack*ptr){
+	if(ptr->top==-1){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+}
+
+
+int printfull(struct stack*ptr){
+	if(ptr->top==9){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+}
+
+void push(struct stack*ptr,int value){
+	if(printfull(ptr)){
+		printf("all filled\n");
+	}
+	else{
+	ptr->top++;
+	ptr->arr[ptr->top]=value;
+  }
+}
+int pop(struct stack * ptr){
+	if(printempty(ptr)){
+		printf("empty stack\n");
+	}
+	 int value=ptr->arr[ptr->top];
+	ptr->top--;
+	return value;	
+}
+
+int main(){
+struct stack*sp=(struct stack*)malloc(sizeof(struct stack));
+sp->size=10;
+sp->top=-1;
+sp->arr=(int *)malloc(sizeof(int)*sp->size);
+
+//printf("%d\n",printempty(sp));
+//printf("%d\n",printfull(sp));
+
+push(sp,10);
+push(sp,20);
+push(sp,30);
+push(sp,40);
+push(sp,50);
+
+printf("%d\n",pop(sp));
+printf("%d\n",pop(sp));
+printf("%d\n",pop(sp));
+printf("%d\n",pop(sp));
+printf("%d\n",pop(sp));
+
+//printf("%d\n",printempty(sp));
+//printf("%d\n",printfull(sp));
+}
