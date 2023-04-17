@@ -1,0 +1,49 @@
+#include<iostream>
+#include<stdlib.h>
+struct node{
+	int data;
+	struct node* left;
+	struct node* right;
+};
+struct node* creatnode(int Data){
+	struct node* ptr;
+	ptr=(struct node*)malloc(sizeof(struct node));
+	ptr->data=Data;
+	ptr->left=NULL;
+	ptr->right=NULL;
+	return ptr;
+}
+void rightprint(struct node*ptr){
+	while(ptr->right!=NULL){
+		printf("%d ",ptr->data);
+		ptr=ptr->right;
+	}
+}
+void leftprint(struct node*ptr){
+	while(ptr->left!=NULL){
+		printf("%d ",ptr->data);
+		ptr=ptr->left;
+	}
+}
+int main(){
+	struct node* p1=creatnode(10);
+		struct node* p2=creatnode(20);
+			struct node* p3=creatnode(30);
+				struct node* p4=creatnode(40);
+					struct node* p5=creatnode(50);
+						struct node* p6=creatnode(60);
+	p1->right=p2;
+	p2->left=p1;
+	p2->right=p3;
+	p3->left=p2;
+    p3->right=p4;
+	p4->right=p5;
+	p4->left=p3;
+	p5->right=p6;
+	p5->left=p4;
+	p6->left=p5;
+	
+	rightprint(p1);
+	printf("\n");
+	leftprint(p6);				
+}
