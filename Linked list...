@@ -1,0 +1,26 @@
+            insertAtFront();
+            break;
+        case 4:
+            insertAtEnd();
+            break;
+        case 5:
+            insertAtPosition();
+            break;
+        case 6:
+            deleteFirst();
+            break;
+        case 7:
+            deleteEnd();
+            break;
+        case 8:
+            deletePosition();
+            break;
+        case 9:
+            traversalAtPosition();
+            break;
+        default:
+            printf("Incorrect Choice\n");
+        }
+    }
+    return 0;
+}
