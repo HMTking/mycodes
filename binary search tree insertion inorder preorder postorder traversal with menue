@@ -1,0 +1,111 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct leaf{
+	int data;
+	struct leaf *left;
+	struct leaf *right;
+};
+struct leaf *creatleaf(int value){
+	struct leaf* temp=(struct leaf*)malloc(sizeof(struct leaf));
+	temp->data=value;
+	temp->left=NULL;
+	temp->right=NULL;
+	return temp;
+}
+void inorder(struct leaf*head){
+	if (head==NULL ){
+	return;
+	}
+	else{
+	    
+		inorder(head->left);
+		printf("%d ",head->data);
+		inorder(head->right);
+	}
+}
+void preorder(struct leaf*head){
+	if (head==NULL ){
+	return;
+	}
+	else{
+	    printf("%d ",head->data);
+		inorder(head->left);
+		inorder(head->right);
+	}
+}
+void postorder(struct leaf*head){
+	if (head==NULL ){
+	return;
+	}
+	else{
+	    
+		inorder(head->left);
+		inorder(head->right);
+		printf("%d ",head->data);
+	}
+}
+struct leaf * insert(int value,struct leaf * head){
+	if(head==NULL){
+		return creatleaf(value);
+	}
+	else if ((head->data)>value){
+	head->left=insert(value,head->left);
+	}
+	else if((head->data)<value){
+	head->right=insert(value,head->right);
+	}
+	else{
+		printf("value is allrady exist\n");
+	}
+	return head;
+	
+}
+
+int main(){
+	int value;
+	printf("enter root data:");
+	scanf("%d",&value);
+	struct leaf *head=(struct leaf *)malloc(sizeof(struct leaf));
+	head=creatleaf(value);
+	for(int i=0;i<i+1;i++){
+	    while(1){
+	    int x;
+	    printf("enter\n1.insert\n2.inorder travalsan\n3.preoder travarsal\n4.post order travarsal\n:");
+	    scanf("%d",&x);
+	    switch(x){
+	        case 1:
+	        while(1){
+	        int value;
+	        printf("enter value for inserting in binary tree:");
+	        scanf("%d",&value);
+	        insert(value,head);
+	        int again;
+	        printf("enter 'any number'.continue insertion   '0'. exit from insertion:");
+	        scanf("%d",&again);
+	        if(again==0){
+	            break;
+	        }
+	        }
+	        break;
+	        case 2:
+	        inorder(head);
+	        break;
+	        case 3:
+	        preorder(head);
+	        break;
+	        case 4:
+	        postorder(head);
+	        break;
+	        default:
+	        printf("pleas select apropriat number\n");
+	    }
+int decision;
+printf("\nenter   \n'0'. exit from whole program \n'any number'.to go menue\n:");
+scanf("%d",&decision);
+if(decision==0){
+    break;
+}
+
+	}
+ }	
+}
